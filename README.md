@@ -44,5 +44,7 @@ Lesson 4.
 1.Подсчитайте средний возраст пользователей в таблице users:
 
 ALTER TABLE users ADD age INT NOT NULL;
+
 UPDATE users SET age = TIMESTAMPDIFF(YEAR, birthday_at, NOW());
+
 SELECT AVG(age) FROM users;
