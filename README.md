@@ -37,3 +37,10 @@ SELECT id, name, birthday_at FROM users WHERE (birthday_at LIKE '%may%' OR birth
 
 Из таблицы catalogs извлекаются записи при помощи запроса. SELECT * FROM catalogs WHERE id IN (5, 1, 2); 
 Отсортируйте записи в порядке, заданном в списке IN.
+
+
+Lesson 4
+1.Подсчитайте средний возраст пользователей в таблице users
+ALTER TABLE users ADD age INT NOT NULL;
+UPDATE users SET age = TIMESTAMPDIFF(YEAR, birthday_at, NOW());
+SELECT AVG(age) FROM users;
