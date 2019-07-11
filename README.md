@@ -62,4 +62,5 @@ INSERT INTO cat (value) VALUES
     ->     (3),
     ->     (4),
     ->     (5);
-SELECT ROUND(exp(SUM(log(value)))) summ FROM cat;
+    
+SELECT exp(SUM(ln(value))) summ FROM cat;
