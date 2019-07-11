@@ -48,3 +48,18 @@ ALTER TABLE users ADD age INT NOT NULL;
 UPDATE users SET age = TIMESTAMPDIFF(YEAR, birthday_at, NOW());
 
 SELECT AVG(age) FROM users;
+
+2. Подсчитайте количество дней рождения, которые приходятся на каждую из дней недели. Следует учесть, что необходимы дни недели текущего года, а не года рождения.
+
+
+3. Подсчитайте произведение чисел в столбце таблицы
+
+CREATE TABLE cat (id SERIAL PRIMARY KEY,   value INT NULL );
+
+INSERT INTO cat (value) VALUES
+    ->     (1),
+    ->     (2),
+    ->     (3),
+    ->     (4),
+    ->     (5);
+SELECT ROUND(exp(SUM(log(value)))) summ FROM cat;
