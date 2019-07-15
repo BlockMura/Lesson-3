@@ -37,7 +37,7 @@ SELECT id, name, birthday_at FROM users WHERE (birthday_at LIKE '%may%' OR birth
 
 Из таблицы catalogs извлекаются записи при помощи запроса. SELECT * FROM catalogs WHERE id IN (5, 1, 2); 
 Отсортируйте записи в порядке, заданном в списке IN.
-
+1. SELECT * FROM catalogs WHERE id IN (5, 1, 2) ORDER BY FIND_IN_SET(id,'5,1,2');
 
 Lesson 4.
 
