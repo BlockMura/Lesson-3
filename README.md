@@ -68,7 +68,7 @@ SELECT AVG(age) FROM users;
 
 3. Подсчитайте произведение чисел в столбце таблицы
 
-CREATE TABLE cat (id SERIAL PRIMARY KEY,   value INT NULL );
+CREATE TABLE cat (id SERIAL PRIMARY KEY, value INT NULL );
 
 INSERT INTO cat (value) VALUES
     ->     (1),
